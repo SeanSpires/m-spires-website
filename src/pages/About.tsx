@@ -92,18 +92,12 @@ export function About() {
 
             {/* Headshot */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src={headshotImage}
-                    alt="Martin Spires"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground rounded-xl px-5 py-3 shadow-lg">
-                  <p className="text-2xl font-serif font-bold">40+</p>
-                  <p className="text-sm text-primary-foreground/80">Years of Excellence</p>
-                </div>
+              <div className="w-80 h-96 sm:w-96 sm:h-[28rem] lg:w-[26rem] lg:h-[32rem] rounded-2xl overflow-hidden shadow-2xl bg-secondary">
+                <img
+                  src={headshotImage}
+                  alt="Martin Spires"
+                  className="w-full h-full object-contain object-top"
+                />
               </div>
             </div>
           </div>

@@ -113,18 +113,12 @@ export function Home() {
 
             {/* Headshot Image */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-foreground/10">
-                  <img
-                    src={headshotImage}
-                    alt="Martin Spires - Sales Trainer"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-4 -left-4 bg-accent text-accent-foreground rounded-xl px-5 py-3 shadow-lg">
-                  <p className="text-2xl font-serif font-bold">40+</p>
-                  <p className="text-sm">Years of Excellence</p>
-                </div>
+              <div className="w-80 h-96 sm:w-96 sm:h-[28rem] lg:w-[26rem] lg:h-[32rem] rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-foreground/10 bg-primary-foreground/5">
+                <img
+                  src={headshotImage}
+                  alt="Martin Spires - Sales Trainer"
+                  className="w-full h-full object-contain object-top"
+                />
               </div>
             </div>
           </div>
