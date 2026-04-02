@@ -284,10 +284,10 @@ export function Home() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <a
-                href="tel:+6495331466"
+                href="tel:+6421595180"
                 className="inline-flex items-center justify-center gap-2 px-8 py-3 text-base font-medium border border-primary-foreground/20 text-primary-foreground rounded-full hover:bg-primary-foreground/10 transition-colors"
               >
-                +64 9 533 1466
+                +64 21 595 180
               </a>
             </div>
           </div>

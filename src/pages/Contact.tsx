@@ -4,8 +4,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+64 9 533 1466',
-    href: 'tel:+6495331466',
+    value: '+64 21 595 180',
+    href: 'tel:+6421595180',
   },
   {
     icon: Mail,
@@ -102,11 +102,11 @@ export function Contact() {
                   Speak directly with Martin Spires about your training requirements.
                 </p>
                 <a
-                  href="tel:+6495331466"
+                  href="tel:+6421595180"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-full font-medium hover:bg-accent/90 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  Call +64 9 533 1466
+                  Call +64 21 595 180
                 </a>
               </div>
             </div>

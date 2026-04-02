@@ -49,11 +49,11 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+6495331466"
+                  href="tel:+6421595180"
                   className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  +64 9 533 1466
+                  +64 21 595 180
                 </a>
               </li>
               <li>
