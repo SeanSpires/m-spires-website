@@ -97,6 +97,7 @@ export function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
+                  onClick={() => console.log('[v0] Navigating to /contact')}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-accent text-accent-foreground rounded-full hover:bg-accent/90 transition-colors"
                 >
                   Start Your Transformation
@@ -104,6 +105,7 @@ export function Home() {
                 </Link>
                 <Link
                   to="/about-martin-spires"
+                  onClick={() => console.log('[v0] Navigating to /about-martin-spires')}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium border border-primary-foreground/20 rounded-full hover:bg-primary-foreground/10 transition-colors"
                 >
                   About Martin Spires
