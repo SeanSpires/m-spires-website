@@ -68,7 +68,7 @@ export function Home() {
     <div>
       {/* Hero Section - Split layout with prominent headshot */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05),transparent_50%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Content */}
@@ -97,7 +97,6 @@ export function Home() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="/contact"
-                  onClick={() => console.log('[v0] Navigating to /contact')}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-accent text-accent-foreground rounded-full hover:bg-accent/90 transition-colors"
                 >
                   Start Your Transformation
@@ -105,7 +104,6 @@ export function Home() {
                 </Link>
                 <Link
                   to="/about-martin-spires"
-                  onClick={() => console.log('[v0] Navigating to /about-martin-spires')}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium border border-primary-foreground/20 rounded-full hover:bg-primary-foreground/10 transition-colors"
                 >
                   About Martin Spires
