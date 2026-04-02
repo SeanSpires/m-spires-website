@@ -11,8 +11,10 @@ import {
 } from 'lucide-react'
 
 // Import training images
-import trainingImage1 from '../assets/images/m4.jpg'
-import trainingImage2 from '../assets/images/m5.jpg'
+import trainingImage1 from '../assets/images/traininginaction1.jpg'
+import trainingImage2 from '../assets/images/traininginaction2.jpg'
+import trainingImage3 from '../assets/images/traininginaction3.jpg'
+import trainingImage4 from '../assets/images/traininginaction4.jpg'
 
 // Import logos
 import abbLogo from '../assets/logos/abb.png'
@@ -93,64 +95,82 @@ export function CompanyFocus() {
         </div>
       </section>
 
-      {/* Objectives Section - Text-focused */}
+      {/* Objectives Section with Images */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-serif font-semibold text-foreground mb-6">
-              Training Solutions That Drive Results
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              Our comprehensive training programs are designed to help organizations 
-              develop high-performing sales teams that consistently deliver results. 
-              We focus on practical, actionable skills that create immediate impact.
-            </p>
-
-            {/* Small image accents inline */}
-            <div className="flex items-center gap-3 mb-10">
-              <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md flex-shrink-0">
-                <img
-                  src={trainingImage1}
-                  alt="Training session"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md flex-shrink-0">
-                <img
-                  src={trainingImage2}
-                  alt="Workshop"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-sm text-muted-foreground italic ml-2">
-                Live training sessions
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            {/* Content */}
+            <div>
+              <h2 className="text-3xl font-serif font-semibold text-foreground mb-6">
+                Training Solutions That Drive Results
+              </h2>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Our comprehensive training programs are designed to help organizations 
+                develop high-performing sales teams that consistently deliver results. 
+                We focus on practical, actionable skills that create immediate impact.
               </p>
+
+              <div className="bg-secondary rounded-2xl p-8">
+                <h3 className="text-lg font-semibold text-foreground mb-6">
+                  We help your team to:
+                </h3>
+                <ul className="space-y-4">
+                  {objectives.map((objective, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-accent" />
+                      </div>
+                      <span className="text-muted-foreground">{objective}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-8">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+                >
+                  Discuss Your Needs
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
 
-            <div className="bg-secondary rounded-2xl p-8">
-              <h3 className="text-lg font-semibold text-foreground mb-6">
-                We help your team to:
-              </h3>
-              <ul className="space-y-4">
-                {objectives.map((objective, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-3 h-3 text-accent" />
-                    </div>
-                    <span className="text-muted-foreground">{objective}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="mt-8">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
-              >
-                Discuss Your Needs
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+            {/* Training Images Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingImage1}
+                    alt="Sales training session"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingImage2}
+                    alt="Training workshop"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="space-y-4 pt-8">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingImage3}
+                    alt="Team training"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingImage4}
+                    alt="Professional development"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
