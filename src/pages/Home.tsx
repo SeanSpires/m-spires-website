@@ -64,77 +64,71 @@ const clientLogos = [
 export function Home() {
   return (
     <div>
-      {/* Hero Section */}
+      {/* Hero Section - Text-focused with profile accent */}
       <section className="relative overflow-hidden bg-primary text-primary-foreground">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.05),transparent_50%)]" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <p className="text-accent font-medium tracking-wide uppercase text-sm">
-                  Sales Training Excellence Since 1984
-                </p>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold leading-tight text-balance">
-                  Transform Your Sales Team Into Top Performers
-                </h1>
-                <p className="text-lg text-primary-foreground/80 leading-relaxed max-w-xl">
-                  Sales Development Programs Ltd provides world-class training solutions led by Martin Spires, 
-                  the most experienced Sales and Presentation Skills Trainer in the Pacific Region.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-accent text-accent-foreground rounded-full hover:bg-accent/90 transition-colors"
-                >
-                  Start Your Transformation
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  to="/about-martin-spires"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium border border-primary-foreground/20 rounded-full hover:bg-primary-foreground/10 transition-colors"
-                >
-                  Meet Martin Spires
-                </Link>
-              </div>
-            </div>
-            <div className="flex flex-col items-center lg:items-end gap-6">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-2xl border-4 border-primary-foreground/20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.03),transparent_50%)]" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
+          <div className="max-w-4xl">
+            {/* Profile Card - Inline accent */}
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary-foreground/20 flex-shrink-0">
                 <img
                   src={martinImage}
-                  alt="Martin Spires - Sales Trainer"
+                  alt="Martin Spires"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="bg-accent text-accent-foreground rounded-xl p-4 shadow-lg text-center">
-                <p className="text-3xl font-serif font-bold">40+</p>
-                <p className="text-sm">Years of Excellence</p>
+              <div>
+                <p className="text-accent font-medium">Martin Spires</p>
+                <p className="text-sm text-primary-foreground/60">Sales Training Excellence Since 1984</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Stats Section */}
-      <section className="bg-secondary py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <p className="text-3xl sm:text-4xl font-serif font-bold text-foreground">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-sm text-muted-foreground">{stat.label}</p>
-              </div>
-            ))}
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-semibold leading-tight text-balance mb-6">
+              Transform Your Sales Team Into Top Performers
+            </h1>
+            
+            <p className="text-lg lg:text-xl text-primary-foreground/80 leading-relaxed max-w-2xl mb-10">
+              Sales Development Programs Ltd provides world-class training solutions. 
+              Martin Spires is recognized as the most experienced Sales and Presentation 
+              Skills Trainer in the Pacific Region, with over 40 years of proven results.
+            </p>
+
+            {/* Stats Row */}
+            <div className="flex flex-wrap gap-8 mb-10 pb-10 border-b border-primary-foreground/10">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <p className="text-3xl font-serif font-bold text-accent">{stat.value}</p>
+                  <p className="text-sm text-primary-foreground/60">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-accent text-accent-foreground rounded-full hover:bg-accent/90 transition-colors"
+              >
+                Start Your Transformation
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/about-martin-spires"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium border border-primary-foreground/20 rounded-full hover:bg-primary-foreground/10 transition-colors"
+              >
+                About Martin Spires
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Client Logos Section */}
-      <section className="py-16 lg:py-20 border-b border-border">
+      <section className="py-12 lg:py-16 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
               Trusted by Leading Organizations Worldwide
             </p>
@@ -156,56 +150,60 @@ export function Home() {
         </div>
       </section>
 
-      {/* About Preview with Training Images */}
+      {/* About Preview - Text dominant with small image accents */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="order-2 lg:order-1 space-y-6">
-              <div className="inline-flex items-center gap-2 text-accent text-sm font-medium">
-                <span className="w-8 h-px bg-accent" />
-                About
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-foreground text-balance">
-                Four Decades of Sales Training Excellence
-              </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  Sales Development Programs Ltd was incorporated in Singapore in June 1984. 
-                  The founder of the company is Martin Spires, who is the principal trainer 
-                  within the organization.
-                </p>
-                <p>
-                  Martin had previously worked for another Singapore based sales training 
-                  organization. Prior to that, he was the Sales Director for a major UK 
-                  organization, running a sales force of 40 personnel.
-                </p>
-              </div>
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors group"
-              >
-                Learn more about our company
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
+          <div className="max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 text-accent text-sm font-medium mb-4">
+              <span className="w-8 h-px bg-accent" />
+              About
             </div>
-            <div className="order-1 lg:order-2">
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-end">
-                <div className="w-48 h-36 rounded-xl overflow-hidden shadow-lg">
-                  <img
-                    src={trainingImage1}
-                    alt="Sales training session"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-36 h-36 rounded-xl overflow-hidden shadow-lg">
-                  <img
-                    src={trainingImage2}
-                    alt="Training workshop"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
+            <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-foreground mb-6 text-balance">
+              Four Decades of Sales Training Excellence
+            </h2>
+            <div className="space-y-6 text-muted-foreground leading-relaxed">
+              <p>
+                Sales Development Programs Ltd was incorporated in Singapore in June 1984. 
+                The founder of the company is Martin Spires, who is the principal trainer 
+                within the organization. From those early days, the company has grown to 
+                serve Fortune 500 clients across the globe.
+              </p>
+              <p>
+                Martin had previously worked for another Singapore based sales training 
+                organization. Prior to that, he was the Sales Director for a major UK 
+                organization, running a sales force of 40 personnel. His hands-on experience 
+                in sales leadership gives him unique insight into the challenges sales teams face.
+              </p>
             </div>
+
+            {/* Small image accents */}
+            <div className="flex items-center gap-4 mt-8 mb-8">
+              <div className="w-20 h-20 rounded-lg overflow-hidden shadow-md flex-shrink-0">
+                <img
+                  src={trainingImage1}
+                  alt="Training session"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="w-20 h-20 rounded-lg overflow-hidden shadow-md flex-shrink-0">
+                <img
+                  src={trainingImage2}
+                  alt="Workshop"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground italic">
+                Training sessions in action
+              </p>
+            </div>
+
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 text-foreground font-medium hover:text-accent transition-colors group"
+            >
+              Learn more about our company
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
@@ -213,7 +211,7 @@ export function Home() {
       {/* Features Section */}
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center gap-2 text-accent text-sm font-medium mb-4">
               <span className="w-8 h-px bg-accent" />
               Our Programs

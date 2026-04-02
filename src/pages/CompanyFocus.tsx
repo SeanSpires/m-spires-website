@@ -93,36 +93,40 @@ export function CompanyFocus() {
         </div>
       </section>
 
-      {/* Objectives Section */}
+      {/* Objectives Section - Text-focused */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            <div>
-              <h2 className="text-3xl font-serif font-semibold text-foreground mb-6">
-                Training Solutions That Drive Results
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Our comprehensive training programs are designed to help organizations 
-                develop high-performing sales teams that consistently deliver results. 
-                We focus on practical, actionable skills that create immediate impact.
-              </p>
-              <div className="mb-8">
-                <div className="w-64 h-48 rounded-xl overflow-hidden shadow-lg">
-                  <img
-                    src={trainingImage1}
-                    alt="Sales training session in action"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-serif font-semibold text-foreground mb-6">
+              Training Solutions That Drive Results
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              Our comprehensive training programs are designed to help organizations 
+              develop high-performing sales teams that consistently deliver results. 
+              We focus on practical, actionable skills that create immediate impact.
+            </p>
+
+            {/* Small image accents inline */}
+            <div className="flex items-center gap-3 mb-10">
+              <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md flex-shrink-0">
+                <img
+                  src={trainingImage1}
+                  alt="Training session"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
-              >
-                Discuss Your Needs
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="w-16 h-16 rounded-lg overflow-hidden shadow-md flex-shrink-0">
+                <img
+                  src={trainingImage2}
+                  alt="Workshop"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground italic ml-2">
+                Live training sessions
+              </p>
             </div>
+
             <div className="bg-secondary rounded-2xl p-8">
               <h3 className="text-lg font-semibold text-foreground mb-6">
                 We help your team to:
@@ -138,6 +142,16 @@ export function CompanyFocus() {
                 ))}
               </ul>
             </div>
+
+            <div className="mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+              >
+                Discuss Your Needs
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -145,40 +159,27 @@ export function CompanyFocus() {
       {/* Programs Section */}
       <section className="py-20 lg:py-28 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <div className="text-center lg:text-left max-w-xl mb-12 lg:mb-0">
-                <h2 className="text-3xl sm:text-4xl font-serif font-semibold mb-4 text-balance">
-                  Training Programs
-                </h2>
-                <p className="text-primary-foreground/70">
-                  In order to achieve these business objectives in measurable terms, 
-                  Sales Development Programs Ltd provides training programs in the following areas:
-                </p>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-serif font-semibold mb-4 text-balance">
+              Training Programs
+            </h2>
+            <p className="text-primary-foreground/70">
+              In order to achieve these business objectives in measurable terms, 
+              Sales Development Programs Ltd provides training programs in the following areas:
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {programs.map((program) => (
+              <div
+                key={program.name}
+                className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-5 hover:bg-primary-foreground/10 transition-colors"
+              >
+                <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-3">
+                  <program.icon className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="font-semibold">{program.name}</h3>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
-                {programs.map((program) => (
-                  <div
-                    key={program.name}
-                    className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-5 hover:bg-primary-foreground/10 transition-colors"
-                  >
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-3">
-                      <program.icon className="w-5 h-5 text-accent" />
-                    </div>
-                    <h3 className="font-semibold">{program.name}</h3>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="hidden lg:flex lg:justify-end">
-              <div className="w-72 h-56 rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={trainingImage2}
-                  alt="Professional training workshop"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
