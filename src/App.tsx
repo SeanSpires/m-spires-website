@@ -1,53 +1,31 @@
-import React, { Component } from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav'; 
-import './App.css';
-import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom"
-import { NavRouting } from './components/nav-routing/nav-routing';
-import { HomeComponent } from './views/home/home';
-import Container from 'react-bootstrap/Container';
-import CompanyFocus from './views/company-focus/company-focus';
-import AboutComponent from './views/about/about';
-import Testimonials from './views/testimonials/testimonials';
-import Contact from './views/contact/contact';
-require('dotenv').config();
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import { Navigation } from './components/Navigation'
+import { Footer } from './components/Footer'
+import { Home } from './pages/Home'
+import { CompanyFocus } from './pages/CompanyFocus'
+import { About } from './pages/About'
+import { Testimonials } from './pages/Testimonials'
+import { Contact } from './pages/Contact'
 
-interface Props {
-
-}
-class App extends React.Component<Props> {
-  render() {
-    return (
-        <Router>
-          <div> 
-            <Navbar bg="light" expand="lg" sticky='top' >
-            <Nav>
-                <Link to="/" style={{fontSize: '1.5em', marginLeft: 40, textAlign: 'left'}}>Sales Development Programs Ltd</Link>
-            </Nav>
-              <Navbar.Toggle aria-controls="basic-navbar-nav" style={{marginLeft: 40}}/>
-              <Navbar.Collapse>
-              <Nav className="ml-auto" style={{marginRight: 40}}>
-                <NavRouting routePath='/about' routeText='Company Focus'/>
-                <NavRouting routePath='/about-martin-spires' routeText='Martin Spires'/>             
-                <NavRouting routePath='/testimonials' routeText='Testimonials'/>
-                <NavRouting routePath='/contact' routeText='Enquiries'/>                    
-                                    
-              </Nav>
-              </Navbar.Collapse>
-            </Navbar>
-            <Route exact path="/" render={() => (
-              <Redirect to="/home"/>              
-            )} />
-              <Route path="/home/" component={HomeComponent} />
-              <Route path="/about/" component={CompanyFocus}/>
-              <Route path="/about-martin-spires/" component={AboutComponent} />
-              <Route path="/testimonials/" component={Testimonials}/>
-              <Route path="/contact/" component={Contact}/>
-          </div>
-        </Router>
-        
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen flex flex-col">
+        <Navigation />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/about" element={<CompanyFocus />} />
+            <Route path="/about-martin-spires" element={<About />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+  )
 }
 
-export default App;
+export default App
