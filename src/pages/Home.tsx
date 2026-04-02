@@ -98,15 +98,15 @@ export function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="flex flex-col items-center lg:items-end gap-6">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-2xl border-4 border-primary-foreground/20">
                 <img
                   src={martinImage}
                   alt="Martin Spires - Sales Trainer"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground rounded-xl p-4 shadow-lg">
+              <div className="bg-accent text-accent-foreground rounded-xl p-4 shadow-lg text-center">
                 <p className="text-3xl font-serif font-bold">40+</p>
                 <p className="text-sm">Years of Excellence</p>
               </div>
@@ -143,12 +143,12 @@ export function Home() {
             {clientLogos.map((client) => (
               <div
                 key={client.name}
-                className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+                className="flex items-center justify-center"
               >
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-12 w-auto object-contain"
+                  className="h-10 w-auto object-contain"
                 />
               </div>
             ))}
@@ -189,15 +189,15 @@ export function Home() {
               </Link>
             </div>
             <div className="order-1 lg:order-2">
-              <div className="relative">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-end">
+                <div className="w-48 h-36 rounded-xl overflow-hidden shadow-lg">
                   <img
                     src={trainingImage1}
                     alt="Sales training session"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-8 -right-8 w-48 aspect-square rounded-xl overflow-hidden shadow-lg border-4 border-background">
+                <div className="w-36 h-36 rounded-xl overflow-hidden shadow-lg">
                   <img
                     src={trainingImage2}
                     alt="Training workshop"

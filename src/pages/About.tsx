@@ -86,15 +86,15 @@ export function About() {
                 Customer Service and Presentation Skills Trainer in the entirety of the Pacific Region.
               </p>
             </div>
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+            <div className="flex flex-col items-center gap-6">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-xl border-4 border-background">
                 <img
                   src={martinPortrait}
                   alt="Martin Spires - Sales Trainer"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground rounded-xl p-4 shadow-lg">
+              <div className="bg-primary text-primary-foreground rounded-xl p-4 shadow-lg text-center">
                 <p className="text-3xl font-serif font-bold">40+</p>
                 <p className="text-sm text-primary-foreground/80">Years of Excellence</p>
               </div>
@@ -159,23 +159,23 @@ export function About() {
                 </p>
               </div>
             </div>
-            <div className="space-y-6">
-              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+            <div className="space-y-4">
+              <div className="w-64 h-48 rounded-xl overflow-hidden shadow-lg">
                 <img
                   src={trainingSession1}
                   alt="Martin Spires conducting a training session"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
+              <div className="flex gap-4">
+                <div className="w-32 h-32 rounded-xl overflow-hidden shadow-lg">
                   <img
                     src={trainingSession2}
                     alt="Sales training workshop"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
+                <div className="w-32 h-32 rounded-xl overflow-hidden shadow-lg">
                   <img
                     src={trainingSession3}
                     alt="Professional development session"

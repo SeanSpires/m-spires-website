@@ -106,8 +106,8 @@ export function CompanyFocus() {
                 develop high-performing sales teams that consistently deliver results. 
                 We focus on practical, actionable skills that create immediate impact.
               </p>
-              <div className="space-y-4 mb-8">
-                <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-lg">
+              <div className="mb-8">
+                <div className="w-64 h-48 rounded-xl overflow-hidden shadow-lg">
                   <img
                     src={trainingImage1}
                     alt="Sales training session in action"
@@ -170,8 +170,8 @@ export function CompanyFocus() {
                 ))}
               </div>
             </div>
-            <div className="hidden lg:block">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="hidden lg:flex lg:justify-end">
+              <div className="w-72 h-56 rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={trainingImage2}
                   alt="Professional training workshop"
@@ -211,7 +211,7 @@ export function CompanyFocus() {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                  className="h-8 w-auto object-contain"
                 />
                 <span className="text-sm text-muted-foreground font-medium">{client.name}</span>
               </div>
