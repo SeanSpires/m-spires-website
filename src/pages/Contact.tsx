@@ -4,8 +4,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+64 9 533 1466',
-    href: 'tel:+6495331466',
+    value: '+64 21 595 180',
+    href: 'tel:+6421595180',
   },
   {
     icon: Mail,
@@ -33,7 +33,7 @@ const services = [
   'Presentation Skills',
   'Customer Service Excellence',
   'Account Management',
-  'Train the Trainer Programs',
+  'Train the Trainer Programmes',
 ]
 
 export function Contact() {
@@ -102,11 +102,11 @@ export function Contact() {
                   Speak directly with Martin Spires about your training requirements.
                 </p>
                 <a
-                  href="tel:+6495331466"
+                  href="tel:+6421595180"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-full font-medium hover:bg-accent/90 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  Call +64 9 533 1466
+                  Call +64 21 595 180
                 </a>
               </div>
             </div>
@@ -115,10 +115,10 @@ export function Contact() {
             <div className="space-y-8">
               <div className="bg-secondary rounded-2xl p-8">
                 <h3 className="text-xl font-semibold text-foreground mb-6">
-                  Our Training Programs
+                  Our Training Programmes
                 </h3>
                 <p className="text-muted-foreground mb-6">
-                  Inquire about any of our specialized training programs:
+                  Enquire about any of our specialised training programmes:
                 </p>
                 <ul className="space-y-3">
                   {services.map((service) => (
@@ -153,7 +153,7 @@ export function Contact() {
                     <div>
                       <p className="font-medium text-foreground">Tailored Proposal</p>
                       <p className="text-sm text-muted-foreground">
-                        Receive a customized training program proposal
+                        Receive a customised training programme proposal
                       </p>
                     </div>
                   </li>

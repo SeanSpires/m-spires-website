@@ -72,7 +72,7 @@ export function Testimonials() {
               Client Testimonials
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Read what organizations around the world have to say about their experience 
+              Read what organisations around the world have to say about their experience 
               working with Sales Development Programs Ltd and Martin Spires.
             </p>
           </div>
@@ -170,7 +170,7 @@ export function Testimonials() {
             Ready to Join Our Success Stories?
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Discover how our training programs can help your organization achieve 
+            Discover how our training programmes can help your organisation achieve 
             measurable results and sustainable growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -185,7 +185,7 @@ export function Testimonials() {
               to="/about"
               className="inline-flex items-center justify-center gap-2 px-8 py-3 text-base font-medium border border-border text-foreground rounded-full hover:bg-secondary transition-colors"
             >
-              Learn About Our Programs
+              Learn About Our Programmes
             </Link>
           </div>
         </div>

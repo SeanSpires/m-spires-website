@@ -83,9 +83,9 @@ export function About() {
                 The Most Experienced Sales Trainer in the Pacific Region
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Martin Spires is now regarded as the most successful and experienced Sales, 
-                Customer Service and Presentation Skills Trainer in the entirety of the Pacific Region. 
-                With over 40 years of hands-on experience, he has trained thousands of professionals 
+                Martin Spires is now regarded as the most successful and experienced Sales,
+                Customer Service and Presentation Skills Trainer in the entirety of the Pacific Region.
+                With over 40 years of hands-on experience, he has trained thousands of professionals
                 across Fortune 500 companies worldwide.
               </p>
             </div>
@@ -132,31 +132,31 @@ export function About() {
               </h2>
               <div className="prose prose-lg text-muted-foreground space-y-6">
                 <p className="leading-relaxed">
-                  Martin Spires was a record-breaking Salesman from 1976 through to 1983 in the 
-                  United Kingdom. Graduating from the University of Keele, UK in 1976, he went 
-                  straight into the world of selling. After spending 1 year in Africa conducting 
+                  Martin Spires was a record-breaking Salesman from 1976 through to 1983 in the
+                  United Kingdom. Graduating from the University of Keele, UK in 1976, he went
+                  straight into the world of selling. After spending 1 year in Africa conducting
                   voluntary work, he joined the &quot;Daily Mail&quot; as a Sales Executive.
                 </p>
                 <p className="leading-relaxed">
-                  In 1979 Martin then joined the &quot;Graduate Group&quot; rising to become Sales Director 
+                  In 1979 Martin then joined the &quot;Graduate Group&quot; rising to become Sales Director
                   by the age of 26 running a sales force of 40 personnel.
                 </p>
                 <p className="leading-relaxed">
-                  In 1983, Martin Spires came to Singapore as Training Director for &quot;Asian Sales 
-                  Training&quot; (a division of the Institute of International Research) based in 
+                  In 1983, Martin Spires came to Singapore as Training Director for &quot;Asian Sales
+                  Training&quot; (a division of the Institute of International Research) based in
                   Singapore and then Jakarta.
                 </p>
                 <p className="leading-relaxed">
-                  In 1984 Sales Development Programs Pte Ltd was incorporated with Martin as its 
-                  Managing Director. Within the first 2 weeks of business, training programs were 
-                  successfully implemented for companies such as Black &amp; Decker and Van der Horst. 
-                  Recently Martin has incorporated a sister company, Sales Development Programs Ltd, 
+                  In 1984 Sales Development Programs Pte Ltd was incorporated with Martin as its
+                  Managing Director. Within the first 2 weeks of business, training programs were
+                  successfully implemented for companies such as Black &amp; Decker and Van der Horst.
+                  Recently Martin has incorporated a sister company, Sales Development Programs Ltd,
                   in Auckland, New Zealand.
                 </p>
                 <p className="leading-relaxed">
-                  From 1984 to the present, the customer reference list of Martin Spires reads like 
-                  the Fortune 500 of Asia/Pacific. The customer base covers New Zealand, Australia, 
-                  SE Asia, Indian sub continent, Europe, USA, Japan and China. Martin Spires is now 
+                  From 1984 to the present, the customer reference list of Martin Spires reads like
+                  the Fortune 500 of Asia/Pacific. The customer base covers New Zealand, Australia,
+                  SE Asia, Indian sub continent, Europe, USA, Japan and China. Martin Spires is now
                   a global Corporate Trainer with an extensive customer base in Europe and the USA.
                 </p>
               </div>
@@ -196,13 +196,8 @@ export function About() {
       <section className="py-20 lg:py-28 bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 text-accent text-sm font-medium mb-4">
-              <span className="w-8 h-px bg-accent" />
-              Career Journey
-              <span className="w-8 h-px bg-accent" />
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-foreground text-balance">
-              A Legacy of Excellence
+              Career Journey
             </h2>
           </div>
           <div className="max-w-3xl mx-auto">
