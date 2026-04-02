@@ -92,11 +92,11 @@ export function About() {
 
             {/* Headshot */}
             <div className="flex justify-center lg:justify-end">
-              <div className="w-80 h-96 sm:w-96 sm:h-[28rem] lg:w-[26rem] lg:h-[32rem] rounded-2xl overflow-hidden shadow-2xl bg-secondary">
+              <div className="w-80 sm:w-96 lg:w-[26rem] rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={headshotImage}
                   alt="Martin Spires"
-                  className="w-full h-full object-contain object-top"
+                  className="w-full h-auto"
                 />
               </div>
             </div>

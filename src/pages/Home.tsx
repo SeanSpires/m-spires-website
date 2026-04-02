@@ -113,11 +113,11 @@ export function Home() {
 
             {/* Headshot Image */}
             <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
-              <div className="w-80 h-96 sm:w-96 sm:h-[28rem] lg:w-[26rem] lg:h-[32rem] rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-foreground/10 bg-primary-foreground/5">
+              <div className="w-80 sm:w-96 lg:w-[26rem] rounded-2xl overflow-hidden shadow-2xl border-4 border-primary-foreground/10">
                 <img
                   src={headshotImage}
                   alt="Martin Spires - Sales Trainer"
-                  className="w-full h-full object-contain object-top"
+                  className="w-full h-auto"
                 />
               </div>
             </div>
