@@ -11,8 +11,10 @@ import {
 } from 'lucide-react'
 
 // Import training images
-import trainingImage1 from '../assets/images/m4.jpg'
-import trainingImage2 from '../assets/images/m5.jpg'
+import trainingImage1 from '../assets/images/traininginaction1.jpg'
+import trainingImage2 from '../assets/images/traininginaction2.jpg'
+import trainingImage3 from '../assets/images/traininginaction3.jpg'
+import trainingImage4 from '../assets/images/traininginaction4.jpg'
 
 // Import logos
 import abbLogo from '../assets/logos/abb.png'
@@ -93,10 +95,11 @@ export function CompanyFocus() {
         </div>
       </section>
 
-      {/* Objectives Section */}
+      {/* Objectives Section with Images */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            {/* Content */}
             <div>
               <h2 className="text-3xl font-serif font-semibold text-foreground mb-6">
                 Training Solutions That Drive Results
@@ -106,37 +109,68 @@ export function CompanyFocus() {
                 develop high-performing sales teams that consistently deliver results. 
                 We focus on practical, actionable skills that create immediate impact.
               </p>
-              <div className="space-y-4 mb-8">
-                <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-lg">
+
+              <div className="bg-secondary rounded-2xl p-8">
+                <h3 className="text-lg font-semibold text-foreground mb-6">
+                  We help your team to:
+                </h3>
+                <ul className="space-y-4">
+                  {objectives.map((objective, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-accent" />
+                      </div>
+                      <span className="text-muted-foreground">{objective}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-8">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
+                >
+                  Discuss Your Needs
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Training Images Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                   <img
                     src={trainingImage1}
-                    alt="Sales training session in action"
+                    alt="Sales training session"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingImage2}
+                    alt="Training workshop"
                     className="w-full h-full object-cover"
                   />
                 </div>
               </div>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
-              >
-                Discuss Your Needs
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-            <div className="bg-secondary rounded-2xl p-8">
-              <h3 className="text-lg font-semibold text-foreground mb-6">
-                We help your team to:
-              </h3>
-              <ul className="space-y-4">
-                {objectives.map((objective, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-3 h-3 text-accent" />
-                    </div>
-                    <span className="text-muted-foreground">{objective}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="space-y-4 pt-8">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingImage3}
+                    alt="Team training"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingImage4}
+                    alt="Professional development"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -145,40 +179,27 @@ export function CompanyFocus() {
       {/* Programs Section */}
       <section className="py-20 lg:py-28 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div>
-              <div className="text-center lg:text-left max-w-xl mb-12 lg:mb-0">
-                <h2 className="text-3xl sm:text-4xl font-serif font-semibold mb-4 text-balance">
-                  Training Programs
-                </h2>
-                <p className="text-primary-foreground/70">
-                  In order to achieve these business objectives in measurable terms, 
-                  Sales Development Programs Ltd provides training programs in the following areas:
-                </p>
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-serif font-semibold mb-4 text-balance">
+              Training Programs
+            </h2>
+            <p className="text-primary-foreground/70">
+              In order to achieve these business objectives in measurable terms, 
+              Sales Development Programs Ltd provides training programs in the following areas:
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+            {programs.map((program) => (
+              <div
+                key={program.name}
+                className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-5 hover:bg-primary-foreground/10 transition-colors"
+              >
+                <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-3">
+                  <program.icon className="w-5 h-5 text-accent" />
+                </div>
+                <h3 className="font-semibold">{program.name}</h3>
               </div>
-              <div className="grid sm:grid-cols-2 gap-4 mt-8">
-                {programs.map((program) => (
-                  <div
-                    key={program.name}
-                    className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-5 hover:bg-primary-foreground/10 transition-colors"
-                  >
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-3">
-                      <program.icon className="w-5 h-5 text-accent" />
-                    </div>
-                    <h3 className="font-semibold">{program.name}</h3>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="hidden lg:block">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={trainingImage2}
-                  alt="Professional training workshop"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -211,7 +232,7 @@ export function CompanyFocus() {
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                  className="h-8 w-auto object-contain"
                 />
                 <span className="text-sm text-muted-foreground font-medium">{client.name}</span>
               </div>

@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, MapPin, Calendar, Briefcase, Award } from 'lucide-react'
 
-// Import trainer images
-import martinPortrait from '../assets/images/m1.jpg'
-import trainingSession1 from '../assets/images/m6.jpg'
-import trainingSession2 from '../assets/images/m7.jpg'
-import trainingSession3 from '../assets/images/m11.jpg'
+// Import images
+import headshotImage from '../assets/images/headshot.png'
+import trainingImage1 from '../assets/images/traininginaction1.jpg'
+import trainingImage2 from '../assets/images/traininginaction2.jpg'
+import trainingImage3 from '../assets/images/traininginaction3.jpg'
 
 const timeline = [
   {
@@ -66,37 +66,38 @@ const highlights = [
 export function About() {
   return (
     <div>
-      {/* Hero Section */}
+      {/* Hero Section - Split layout with headshot */}
       <section className="bg-secondary py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Content */}
             <div>
               <div className="inline-flex items-center gap-2 text-accent text-sm font-medium mb-4">
                 <span className="w-8 h-px bg-accent" />
                 About
               </div>
-              <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-foreground mb-6 text-balance">
+              <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-foreground mb-4">
                 Martin Spires
               </h1>
-              <p className="text-xl text-accent font-medium mb-4">
+              <p className="text-xl text-accent font-medium mb-6">
                 The Most Experienced Sales Trainer in the Pacific Region
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Martin Spires is now regarded as the most successful and experienced Sales, 
-                Customer Service and Presentation Skills Trainer in the entirety of the Pacific Region.
+                Customer Service and Presentation Skills Trainer in the entirety of the Pacific Region. 
+                With over 40 years of hands-on experience, he has trained thousands of professionals 
+                across Fortune 500 companies worldwide.
               </p>
             </div>
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+
+            {/* Headshot */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="w-80 sm:w-96 lg:w-[26rem] rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src={martinPortrait}
-                  alt="Martin Spires - Sales Trainer"
-                  className="w-full h-full object-cover object-top"
+                  src={headshotImage}
+                  alt="Martin Spires"
+                  className="w-full h-auto"
                 />
-              </div>
-              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground rounded-xl p-4 shadow-lg">
-                <p className="text-3xl font-serif font-bold">40+</p>
-                <p className="text-sm text-primary-foreground/80">Years of Excellence</p>
               </div>
             </div>
           </div>
@@ -123,7 +124,8 @@ export function About() {
       {/* Biography with Training Images */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Biography Text */}
             <div>
               <h2 className="text-3xl font-serif font-semibold text-foreground mb-8">
                 Biography
@@ -159,25 +161,27 @@ export function About() {
                 </p>
               </div>
             </div>
+
+            {/* Training Images */}
             <div className="space-y-6">
-              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={trainingSession1}
+                  src={trainingImage1}
                   alt="Martin Spires conducting a training session"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src={trainingSession2}
+                    src={trainingImage2}
                     alt="Sales training workshop"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src={trainingSession3}
+                    src={trainingImage3}
                     alt="Professional development session"
                     className="w-full h-full object-cover"
                   />
