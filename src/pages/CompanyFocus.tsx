@@ -38,9 +38,9 @@ const objectives = [
   'Increase the confidence of the team',
   'Communicate value to their customers',
   'Ensure that the team present themselves as proactive problem solvers',
-  'Present a consistently positive image of the organization to the customer',
+  'Present a consistently positive image of the organisation to the customer',
   'Cost justify the decision to purchase, specify or recommend solutions',
-  'Ensure that the Trainers implement exciting and challenging training programs',
+  'Ensure that the Trainers implement exciting and challenging training programmes',
 ]
 
 const programs = [
@@ -105,7 +105,7 @@ export function CompanyFocus() {
                 Training Solutions That Drive Results
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Our comprehensive training programs are designed to help organizations 
+                Our comprehensive training programmes are designed to help organisations 
                 develop high-performing sales teams that consistently deliver results. 
                 We focus on practical, actionable skills that create immediate impact.
               </p>
@@ -181,11 +181,11 @@ export function CompanyFocus() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold mb-4 text-balance">
-              Training Programs
+              Training Programmes
             </h2>
             <p className="text-primary-foreground/70">
               In order to achieve these business objectives in measurable terms, 
-              Sales Development Programs Ltd provides training programs in the following areas:
+              Sales Development Programs Ltd provides training programmes in the following areas:
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
@@ -214,7 +214,7 @@ export function CompanyFocus() {
               <span className="w-8 h-px bg-accent" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-foreground mb-4 text-balance">
-              Trusted by Leading Organizations
+              Proud to Have Worked With
             </h2>
             <p className="text-muted-foreground">
               Over 40 years, Sales Development Programs Ltd has provided in-house training 
@@ -270,7 +270,7 @@ export function CompanyFocus() {
             Join Our Growing List of Success Stories
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Discover how our training programs can transform your sales team and 
+            Discover how our training programmes can transform your sales team and 
             drive measurable business results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

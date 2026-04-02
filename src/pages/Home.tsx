@@ -130,7 +130,7 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
-              Trusted by Leading Organizations Worldwide
+              Proud to Have Worked With
             </p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-items-center">
@@ -205,8 +205,8 @@ export function Home() {
                 </p>
                 <p>
                   Martin had previously worked for another Singapore based sales training 
-                  organization. Prior to that, he was the Sales Director for a major UK 
-                  organization, running a sales force of 40 personnel.
+                  organisation. Prior to that, he was the Sales Director for a major UK 
+                  organisation, running a sales force of 40 personnel.
                 </p>
               </div>
               <Link
@@ -227,7 +227,7 @@ export function Home() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center gap-2 text-accent text-sm font-medium mb-4">
               <span className="w-8 h-px bg-accent" />
-              Our Programs
+              Our Programmes
               <span className="w-8 h-px bg-accent" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-foreground text-balance">
@@ -257,7 +257,7 @@ export function Home() {
               to="/about"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
             >
-              View All Programs
+              View All Programmes
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -272,7 +272,7 @@ export function Home() {
               Ready to Elevate Your Sales Performance?
             </h2>
             <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8">
-              Contact us today to discuss how our tailored training programs can help your 
+              Contact us today to discuss how our tailored training programmes can help your 
               team achieve measurable results and sustainable growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
