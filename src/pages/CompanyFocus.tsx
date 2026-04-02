@@ -10,6 +10,24 @@ import {
   Check
 } from 'lucide-react'
 
+// Import training images
+import trainingImage1 from '../assets/images/m4.jpg'
+import trainingImage2 from '../assets/images/m5.jpg'
+
+// Import logos
+import abbLogo from '../assets/logos/abb.png'
+import dbsLogo from '../assets/logos/dbs.png'
+import dhlLogo from '../assets/logos/dhl.png'
+import ikeaLogo from '../assets/logos/ikea.png'
+import ncrLogo from '../assets/logos/ncr.png'
+import nissanLogo from '../assets/logos/nissan.png'
+import nokiaLogo from '../assets/logos/nokia.png'
+import ocbcLogo from '../assets/logos/ocbc.png'
+import omronLogo from '../assets/logos/omron.png'
+import shellLogo from '../assets/logos/shell.png'
+import singtelLogo from '../assets/logos/singtel.png'
+import volvoLogo from '../assets/logos/volvo.png'
+
 const objectives = [
   'Build up and use negotiating leverage',
   'Implement outstanding presentations',
@@ -33,9 +51,18 @@ const programs = [
 ]
 
 const clientLogos = [
-  'ABB Group', 'Singtel', 'Nissan', 'IKEA',
-  'DHL', 'Shell', 'DBS Bank', 'OCBC Bank',
-  'Nokia', 'NCR Corporation', 'Omron', 'Volvo',
+  { name: 'ABB', logo: abbLogo },
+  { name: 'DBS Bank', logo: dbsLogo },
+  { name: 'DHL', logo: dhlLogo },
+  { name: 'IKEA', logo: ikeaLogo },
+  { name: 'NCR', logo: ncrLogo },
+  { name: 'Nissan', logo: nissanLogo },
+  { name: 'Nokia', logo: nokiaLogo },
+  { name: 'OCBC', logo: ocbcLogo },
+  { name: 'Omron', logo: omronLogo },
+  { name: 'Shell', logo: shellLogo },
+  { name: 'Singtel', logo: singtelLogo },
+  { name: 'Volvo', logo: volvoLogo },
 ]
 
 const additionalClients = [
@@ -79,6 +106,15 @@ export function CompanyFocus() {
                 develop high-performing sales teams that consistently deliver results. 
                 We focus on practical, actionable skills that create immediate impact.
               </p>
+              <div className="space-y-4 mb-8">
+                <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingImage1}
+                    alt="Sales training session in action"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-medium bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
@@ -109,27 +145,40 @@ export function CompanyFocus() {
       {/* Programs Section */}
       <section className="py-20 lg:py-28 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-serif font-semibold mb-4 text-balance">
-              Training Programs
-            </h2>
-            <p className="text-primary-foreground/70">
-              In order to achieve these business objectives in measurable terms, 
-              Sales Development Programs Ltd provides training programs in the following areas:
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {programs.map((program) => (
-              <div
-                key={program.name}
-                className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-6 hover:bg-primary-foreground/10 transition-colors"
-              >
-                <div className="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center mb-4">
-                  <program.icon className="w-6 h-6 text-accent" />
-                </div>
-                <h3 className="text-lg font-semibold">{program.name}</h3>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div>
+              <div className="text-center lg:text-left max-w-xl mb-12 lg:mb-0">
+                <h2 className="text-3xl sm:text-4xl font-serif font-semibold mb-4 text-balance">
+                  Training Programs
+                </h2>
+                <p className="text-primary-foreground/70">
+                  In order to achieve these business objectives in measurable terms, 
+                  Sales Development Programs Ltd provides training programs in the following areas:
+                </p>
               </div>
-            ))}
+              <div className="grid sm:grid-cols-2 gap-4 mt-8">
+                {programs.map((program) => (
+                  <div
+                    key={program.name}
+                    className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-xl p-5 hover:bg-primary-foreground/10 transition-colors"
+                  >
+                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center mb-3">
+                      <program.icon className="w-5 h-5 text-accent" />
+                    </div>
+                    <h3 className="font-semibold">{program.name}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="hidden lg:block">
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={trainingImage2}
+                  alt="Professional training workshop"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -152,14 +201,19 @@ export function CompanyFocus() {
             </p>
           </div>
 
-          {/* Featured Clients */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+          {/* Featured Client Logos */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 mb-12">
             {clientLogos.map((client) => (
               <div
-                key={client}
-                className="bg-secondary rounded-xl p-6 flex items-center justify-center"
+                key={client.name}
+                className="bg-secondary rounded-xl p-6 flex flex-col items-center justify-center gap-3 hover:shadow-md transition-shadow"
               >
-                <span className="font-medium text-foreground text-center">{client}</span>
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-10 w-auto object-contain grayscale hover:grayscale-0 transition-all"
+                />
+                <span className="text-sm text-muted-foreground font-medium">{client.name}</span>
               </div>
             ))}
           </div>

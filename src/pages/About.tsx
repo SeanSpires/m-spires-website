@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, MapPin, Calendar, Briefcase, Award } from 'lucide-react'
 
+// Import trainer images
+import martinPortrait from '../assets/images/m1.jpg'
+import trainingSession1 from '../assets/images/m6.jpg'
+import trainingSession2 from '../assets/images/m7.jpg'
+import trainingSession3 from '../assets/images/m11.jpg'
+
 const timeline = [
   {
     year: '1976',
@@ -81,18 +87,16 @@ export function About() {
               </p>
             </div>
             <div className="relative">
-              <div className="aspect-[4/5] bg-muted rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <div className="w-40 h-40 rounded-full bg-primary/10 mx-auto flex items-center justify-center">
-                      <span className="text-6xl font-serif font-bold text-primary">MS</span>
-                    </div>
-                    <div>
-                      <p className="font-serif text-xl font-semibold text-foreground">Martin Spires</p>
-                      <p className="text-sm text-muted-foreground">Founder & Principal Trainer</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={martinPortrait}
+                  alt="Martin Spires - Sales Trainer"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground rounded-xl p-4 shadow-lg">
+                <p className="text-3xl font-serif font-bold">40+</p>
+                <p className="text-sm text-primary-foreground/80">Years of Excellence</p>
               </div>
             </div>
           </div>
@@ -116,42 +120,69 @@ export function About() {
         </div>
       </section>
 
-      {/* Biography */}
+      {/* Biography with Training Images */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-serif font-semibold text-foreground mb-8">
-              Biography
-            </h2>
-            <div className="prose prose-lg text-muted-foreground space-y-6">
-              <p className="leading-relaxed">
-                Martin Spires was a record-breaking Salesman from 1976 through to 1983 in the 
-                United Kingdom. Graduating from the University of Keele, UK in 1976, he went 
-                straight into the world of selling. After spending 1 year in Africa conducting 
-                voluntary work, he joined the &quot;Daily Mail&quot; as a Sales Executive.
-              </p>
-              <p className="leading-relaxed">
-                In 1979 Martin then joined the &quot;Graduate Group&quot; rising to become Sales Director 
-                by the age of 26 running a sales force of 40 personnel.
-              </p>
-              <p className="leading-relaxed">
-                In 1983, Martin Spires came to Singapore as Training Director for &quot;Asian Sales 
-                Training&quot; (a division of the Institute of International Research) based in 
-                Singapore and then Jakarta.
-              </p>
-              <p className="leading-relaxed">
-                In 1984 Sales Development Programs Pte Ltd was incorporated with Martin as its 
-                Managing Director. Within the first 2 weeks of business, training programs were 
-                successfully implemented for companies such as Black &amp; Decker and Van der Horst. 
-                Recently Martin has incorporated a sister company, Sales Development Programs Ltd, 
-                in Auckland, New Zealand.
-              </p>
-              <p className="leading-relaxed">
-                From 1984 to the present, the customer reference list of Martin Spires reads like 
-                the Fortune 500 of Asia/Pacific. The customer base covers New Zealand, Australia, 
-                SE Asia, Indian sub continent, Europe, USA, Japan and China. Martin Spires is now 
-                a global Corporate Trainer with an extensive customer base in Europe and the USA.
-              </p>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div>
+              <h2 className="text-3xl font-serif font-semibold text-foreground mb-8">
+                Biography
+              </h2>
+              <div className="prose prose-lg text-muted-foreground space-y-6">
+                <p className="leading-relaxed">
+                  Martin Spires was a record-breaking Salesman from 1976 through to 1983 in the 
+                  United Kingdom. Graduating from the University of Keele, UK in 1976, he went 
+                  straight into the world of selling. After spending 1 year in Africa conducting 
+                  voluntary work, he joined the &quot;Daily Mail&quot; as a Sales Executive.
+                </p>
+                <p className="leading-relaxed">
+                  In 1979 Martin then joined the &quot;Graduate Group&quot; rising to become Sales Director 
+                  by the age of 26 running a sales force of 40 personnel.
+                </p>
+                <p className="leading-relaxed">
+                  In 1983, Martin Spires came to Singapore as Training Director for &quot;Asian Sales 
+                  Training&quot; (a division of the Institute of International Research) based in 
+                  Singapore and then Jakarta.
+                </p>
+                <p className="leading-relaxed">
+                  In 1984 Sales Development Programs Pte Ltd was incorporated with Martin as its 
+                  Managing Director. Within the first 2 weeks of business, training programs were 
+                  successfully implemented for companies such as Black &amp; Decker and Van der Horst. 
+                  Recently Martin has incorporated a sister company, Sales Development Programs Ltd, 
+                  in Auckland, New Zealand.
+                </p>
+                <p className="leading-relaxed">
+                  From 1984 to the present, the customer reference list of Martin Spires reads like 
+                  the Fortune 500 of Asia/Pacific. The customer base covers New Zealand, Australia, 
+                  SE Asia, Indian sub continent, Europe, USA, Japan and China. Martin Spires is now 
+                  a global Corporate Trainer with an extensive customer base in Europe and the USA.
+                </p>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={trainingSession1}
+                  alt="Martin Spires conducting a training session"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingSession2}
+                    alt="Sales training workshop"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingSession3}
+                    alt="Professional development session"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

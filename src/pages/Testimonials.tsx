@@ -1,50 +1,63 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Quote } from 'lucide-react'
+import { ArrowRight, ZoomIn } from 'lucide-react'
+import { useState } from 'react'
 
-const testimonials = [
-  {
-    company: 'Sika',
-    quote: 'Martin delivered exceptional training that transformed how our sales team approaches customer relationships.',
-  },
-  {
-    company: 'Mapei',
-    quote: 'The presentation skills workshop was invaluable. Our team now delivers compelling pitches with confidence.',
-  },
-  {
-    company: 'BS & B Safety Systems',
-    quote: 'Outstanding value-based selling training that helped us preserve margins while increasing close rates.',
-  },
-  {
-    company: 'GEA',
-    quote: 'Martin&apos;s negotiation training gave our team the tools and confidence to handle complex deals effectively.',
-  },
-  {
-    company: 'YRCO',
-    quote: 'Practical, actionable training that delivered immediate results. Highly recommended.',
-  },
-  {
-    company: 'Higgins Concrete',
-    quote: 'The customer service training transformed how we engage with clients at every touchpoint.',
-  },
-  {
-    company: 'Lubrication Engineering',
-    quote: 'Martin&apos;s approach to sales training is both professional and practical. Real-world skills that work.',
-  },
-  {
-    company: 'Dexion Group',
-    quote: 'Excellent account management training that helped us develop stronger, more profitable relationships.',
-  },
-  {
-    company: 'NDA Engineering',
-    quote: 'The Train the Trainer program equipped our internal team to continue developing our sales force.',
-  },
-  {
-    company: 'Jacks',
-    quote: 'Martin brings decades of experience and delivers it in an engaging, memorable way.',
-  },
+// Import testimonial letter images
+import letter002 from '../assets/images/002.jpg'
+import letter034 from '../assets/images/034.jpg'
+import letter066 from '../assets/images/066.jpg'
+import letter078 from '../assets/images/078.jpg'
+import letter080 from '../assets/images/080.jpg'
+import letter088 from '../assets/images/088.jpg'
+import letterGEA from '../assets/images/GEA.jpg'
+import letterAltex from '../assets/images/altex.jpg'
+import letterAtlas from '../assets/images/atlas.jpg'
+import letterBsb from '../assets/images/bsb.jpg'
+import letterBuildtrust from '../assets/images/buildtrust.jpg'
+import letterDex from '../assets/images/dex.jpg'
+import letterEtl from '../assets/images/etl.jpg'
+import letterGeaNew from '../assets/images/gea-new.jpg'
+import letterGranite from '../assets/images/granite.jpg'
+import letterHella from '../assets/images/hella.jpg'
+import letterHomag from '../assets/images/homag.jpg'
+import letterJacks from '../assets/images/jacks.jpg'
+import letterMapei from '../assets/images/mapei.jpg'
+import letterNda from '../assets/images/nda.jpg'
+import letterPepper from '../assets/images/pepper.jpg'
+import letterPoly from '../assets/images/poly.jpg'
+import letterSika from '../assets/images/sika.jpg'
+import letterStiles from '../assets/images/stiles.jpg'
+
+const testimonialLetters = [
+  { image: letterSika, company: 'Sika' },
+  { image: letterMapei, company: 'Mapei' },
+  { image: letterGEA, company: 'GEA' },
+  { image: letterGeaNew, company: 'GEA' },
+  { image: letterAtlas, company: 'Atlas Copco' },
+  { image: letterBsb, company: 'BS&B Safety Systems' },
+  { image: letterDex, company: 'Dexion' },
+  { image: letterHella, company: 'Hella' },
+  { image: letterHomag, company: 'Homag' },
+  { image: letterJacks, company: 'Jacks' },
+  { image: letterNda, company: 'NDA Engineering' },
+  { image: letterPepper, company: 'Pepper' },
+  { image: letterPoly, company: 'Poly' },
+  { image: letterStiles, company: 'Stiles' },
+  { image: letterGranite, company: 'Granite' },
+  { image: letterBuildtrust, company: 'Buildtrust' },
+  { image: letterAltex, company: 'Altex' },
+  { image: letterEtl, company: 'ETL' },
+  { image: letter002, company: 'Client' },
+  { image: letter034, company: 'Client' },
+  { image: letter066, company: 'Client' },
+  { image: letter078, company: 'Client' },
+  { image: letter080, company: 'Client' },
+  { image: letter088, company: 'Client' },
 ]
 
 export function Testimonials() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
   return (
     <div>
       {/* Hero Section */}
@@ -56,53 +69,79 @@ export function Testimonials() {
               Success Stories
             </div>
             <h1 className="text-4xl sm:text-5xl font-serif font-semibold text-foreground mb-6 text-balance">
-              Testimonials
+              Client Testimonials
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Hear from organizations around the world who have transformed their 
-              sales performance through our training programs.
+              Read what organizations around the world have to say about their experience 
+              working with Sales Development Programs Ltd and Martin Spires.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Grid */}
+      {/* Testimonial Letters Grid */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={testimonial.company}
-                className={`bg-secondary rounded-2xl p-8 ${
-                  index === 0 ? 'md:col-span-2' : ''
-                }`}
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-foreground mb-4">
+              Letters from Our Clients
+            </h2>
+            <p className="text-muted-foreground">
+              Click on any letter to view it in full size
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {testimonialLetters.map((letter, index) => (
+              <button
+                key={index}
+                onClick={() => setSelectedImage(letter.image)}
+                className="group relative bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Quote className="w-5 h-5 text-accent" />
-                  </div>
-                  <div className="space-y-4">
-                    <p className={`text-foreground leading-relaxed ${index === 0 ? 'text-lg' : ''}`}>
-                      &quot;{testimonial.quote}&quot;
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                        <span className="text-sm font-semibold text-primary">
-                          {testimonial.company.charAt(0)}
-                        </span>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-foreground">{testimonial.company}</p>
-                        <p className="text-sm text-muted-foreground">Client</p>
-                      </div>
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img
+                    src={letter.image}
+                    alt={`Testimonial letter from ${letter.company}`}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-colors flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                    <div className="bg-background/90 backdrop-blur-sm rounded-full p-3 shadow-lg">
+                      <ZoomIn className="w-6 h-6 text-foreground" />
                     </div>
                   </div>
                 </div>
-              </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/80 to-transparent p-4">
+                  <p className="text-primary-foreground font-medium text-sm">{letter.company}</p>
+                </div>
+              </button>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 bg-secondary hover:bg-muted rounded-full p-3 transition-colors"
+          >
+            <svg className="w-6 h-6 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <img
+            src={selectedImage}
+            alt="Testimonial letter"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
 
       {/* Stats Section */}
       <section className="py-16 bg-primary text-primary-foreground">

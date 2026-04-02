@@ -1,6 +1,23 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, Award, Users, TrendingUp, Target } from 'lucide-react'
 
+// Import images
+import martinImage from '../assets/images/m1.jpg'
+import trainingImage1 from '../assets/images/m2.jpg'
+import trainingImage2 from '../assets/images/m3.jpg'
+
+// Import logos
+import abbLogo from '../assets/logos/abb.png'
+import dbsLogo from '../assets/logos/dbs.png'
+import dhlLogo from '../assets/logos/dhl.png'
+import ikeaLogo from '../assets/logos/ikea.png'
+import nissanLogo from '../assets/logos/nissan.png'
+import nokiaLogo from '../assets/logos/nokia.png'
+import ocbcLogo from '../assets/logos/ocbc.png'
+import shellLogo from '../assets/logos/shell.png'
+import singtelLogo from '../assets/logos/singtel.png'
+import volvoLogo from '../assets/logos/volvo.png'
+
 const stats = [
   { label: 'Years Experience', value: '40+' },
   { label: 'Companies Trained', value: '500+' },
@@ -29,6 +46,19 @@ const features = [
     title: 'Account Management',
     description: 'Develop long-term relationships and maximize customer lifetime value.',
   },
+]
+
+const clientLogos = [
+  { name: 'ABB', logo: abbLogo },
+  { name: 'DBS Bank', logo: dbsLogo },
+  { name: 'DHL', logo: dhlLogo },
+  { name: 'IKEA', logo: ikeaLogo },
+  { name: 'Nissan', logo: nissanLogo },
+  { name: 'Nokia', logo: nokiaLogo },
+  { name: 'OCBC', logo: ocbcLogo },
+  { name: 'Shell', logo: shellLogo },
+  { name: 'Singtel', logo: singtelLogo },
+  { name: 'Volvo', logo: volvoLogo },
 ]
 
 export function Home() {
@@ -69,23 +99,16 @@ export function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-[4/5] bg-gradient-to-br from-primary-foreground/10 to-transparent rounded-2xl overflow-hidden">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/images/martin-spires.jpg"
+                  src={martinImage}
                   alt="Martin Spires - Sales Trainer"
                   className="w-full h-full object-cover object-top"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none'
-                  }}
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-primary-foreground/5">
-                  <div className="text-center space-y-2">
-                    <div className="w-32 h-32 rounded-full bg-primary-foreground/10 mx-auto flex items-center justify-center">
-                      <span className="text-5xl font-serif font-bold">MS</span>
-                    </div>
-                    <p className="text-sm text-primary-foreground/60">Martin Spires</p>
-                  </div>
-                </div>
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground rounded-xl p-4 shadow-lg">
+                <p className="text-3xl font-serif font-bold">40+</p>
+                <p className="text-sm">Years of Excellence</p>
               </div>
             </div>
           </div>
@@ -108,7 +131,32 @@ export function Home() {
         </div>
       </section>
 
-      {/* About Preview */}
+      {/* Client Logos Section */}
+      <section className="py-16 lg:py-20 border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
+              Trusted by Leading Organizations Worldwide
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-items-center">
+            {clientLogos.map((client) => (
+              <div
+                key={client.name}
+                className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-300"
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-12 w-auto object-contain"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Preview with Training Images */}
       <section className="py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -142,12 +190,19 @@ export function Home() {
             </div>
             <div className="order-1 lg:order-2">
               <div className="relative">
-                <div className="aspect-square bg-secondary rounded-2xl" />
-                <div className="absolute inset-4 bg-muted rounded-xl flex items-center justify-center">
-                  <div className="text-center space-y-4 p-8">
-                    <p className="text-6xl font-serif font-bold text-accent">1984</p>
-                    <p className="text-sm text-muted-foreground">Established in Singapore</p>
-                  </div>
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={trainingImage1}
+                    alt="Sales training session"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-8 -right-8 w-48 aspect-square rounded-xl overflow-hidden shadow-lg border-4 border-background">
+                  <img
+                    src={trainingImage2}
+                    alt="Training workshop"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
